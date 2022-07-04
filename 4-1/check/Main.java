@@ -21,11 +21,10 @@ public class Main {
 		
 //	課題③
 //	【Main.java】にてPetクラスとRobotPetクラスをインスタンス化して、下記の完成イメージを出力させなさい。
-	Constants con = new Constants();
-	Pet pet = new Pet(con.CHECK_CLASS_JAVA, con.CHECK_CLASS_HOGE);
+	Pet pet = new Pet(Constants.CHECK_CLASS_JAVA, Constants.CHECK_CLASS_HOGE);
 	pet.introduce();
 	
-	RobotPet robotpet = new RobotPet(con.CHECK_CLASS_R2D2, con.CHECK_CLASS_LUKE);
+	RobotPet robotpet = new RobotPet(Constants.CHECK_CLASS_R2D2, Constants.CHECK_CLASS_LUKE);
 	robotpet.introduce();
 	}
 
