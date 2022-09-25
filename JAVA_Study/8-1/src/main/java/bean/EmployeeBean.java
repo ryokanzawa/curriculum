@@ -1,4 +1,5 @@
 package bean;
+
 /**
  * ・社員情報データ（モデル）
  */
@@ -11,7 +12,7 @@ public class EmployeeBean {
     public void setId(String Id) {
         this.Id = Id;
     }
-    public String Id() {
+    public String getId() {
         return Id;
     }
     public void setPassWord(String PassWord) {
@@ -39,4 +40,3 @@ public class EmployeeBean {
         return Comment;
     }
 }
- 
