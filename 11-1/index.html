@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        th, td {
+            padding : 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <select id = "select_language" onchange="func1()">
+        <option value="1">選択してください</option>
+        <option value="2">日本語</option>
+        <option value="3">English</option>
+        <option value="4">全て表示</option>
+    </select>
+    <table id="tbl">
+        <tr>
+            <th>日本</th>
+            <td>こんにちは</td>
+            <td>ありがとう</td>
+            <td>さようなら</td>
+        </tr>
+        <tr>
+            <th>English</th>
+            <td>Hello</td>
+            <td>Thank you</td>
+            <td>Good Bye</td>
+        </tr>
+    </table>
+
+    <script>
+        //①onchangeで使用されている関数の中身を実装してください。
+        function func1(){
+            let number = document.getElementById("select_language").value
+            console.log(number);
+            let mytable = document.getElementById("tbl");
+            console.log(mytable.rows[0]);
+            console.log(mytable.rows[1]);
+            if (number === '2') {
+                mytable.rows[0].style.display = 'block'
+                mytable.rows[1].style.display = 'none'
+            } else if (number === '3') {
+                mytable.rows[0].style.display = 'none'
+                mytable.rows[1].style.display = 'block'
+            } else {
+                mytable.rows[0].style.display = 'block'
+                mytable.rows[1].style.display = 'block'
+            }
+        }
+    </script>
+</body>
+</html>
