@@ -1,0 +1,19 @@
+.header{
+    text-align: center;
+}
+
+.login-table{
+    padding: 10px;
+    margin:0 auto;
+    border: solid 1px;
+    border-collapse: separate;
+    border-spacing: 20px;
+}
+
+.submit{
+    text-align: right;
+}
+
+.error-msg{
+	color: red;
+}

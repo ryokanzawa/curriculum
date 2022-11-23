@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン画面</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="logo">
+        <img src="/img/logo.png">
+    </div>
+	
+    <div class="header">
+        <h1>Java教育システム</h1>
+    </div>
+	
+	
+    <div class="container">
+        <form action="/login" method="POST" th:object="${staff}">
+            <table class="login-table">
+                <tr>
+                    <th>社員番号</th>
+                    <td> 
+                        <input type="text" name="employeeId" maxlength="6" th:value="*{employeeId}">
+                        <p th:if="${#fields.hasErrors('employeeId')}" th:errors="*{employeeId}" th:errorclass="error-msg"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>パスワード</th>
+                    <td>
+                        <input type="password" name="password" maxlength="50" th:value="*{password}">
+                        <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}" th:errorclass="error-msg"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td class="submit">
+                    <p class="error-msg" th:if="${message} != null" th:text="${message}"></p>
+                	<input type="submit" value="ログイン">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    
+    
+</body>
+</html>
